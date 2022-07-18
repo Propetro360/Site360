@@ -1,25 +1,28 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Propetro Site 360",
+  "short_name": "Site 360",
+  "start_url": ".",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "./assets/images/maskable_icon_x48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "maskable any"
     },
     {
-      "src": "logo192.png",
+      "src": "./assets/images/maskable_icon_x192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "maskable any"
     },
     {
-      "src": "logo512.png",
+      "src": "./assets/images/maskable_icon_x512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable any"
     }
   ],
-  "start_url": ".",
+  "background_color": "#ffffff",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#00875a"
 }
