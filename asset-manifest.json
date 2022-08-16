@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Site360/static/css/main.5757e6d2.css",
-    "main.js": "/Site360/static/js/main.918a5564.js",
+    "main.js": "/Site360/static/js/main.23f79d1f.js",
     "static/css/511.9b6045e4.chunk.css": "/Site360/static/css/511.9b6045e4.chunk.css",
     "static/js/511.981bc617.chunk.js": "/Site360/static/js/511.981bc617.chunk.js",
     "static/js/787.18c9af25.chunk.js": "/Site360/static/js/787.18c9af25.chunk.js",
@@ -16,7 +16,7 @@
     "service-worker.js": "/Site360/service-worker.js",
     "index.html": "/Site360/index.html",
     "main.5757e6d2.css.map": "/Site360/static/css/main.5757e6d2.css.map",
-    "main.918a5564.js.map": "/Site360/static/js/main.918a5564.js.map",
+    "main.23f79d1f.js.map": "/Site360/static/js/main.23f79d1f.js.map",
     "511.9b6045e4.chunk.css.map": "/Site360/static/css/511.9b6045e4.chunk.css.map",
     "511.981bc617.chunk.js.map": "/Site360/static/js/511.981bc617.chunk.js.map",
     "787.18c9af25.chunk.js.map": "/Site360/static/js/787.18c9af25.chunk.js.map",
@@ -30,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.5757e6d2.css",
-    "static/js/main.918a5564.js"
+    "static/js/main.23f79d1f.js"
   ]
 }
