@@ -17,7 +17,7 @@ export const useMemoisedScene = (scene, isFast) => {
       if (radius > 10 && radius < 30) {
         smallObj.push(o);
       }
-      if (isMob || radius < 100000) {
+      if (radius < 300) {
         o.material = new MeshBasicMaterial({
           color: prevMaterial.color,
           reflectivity: 1,
