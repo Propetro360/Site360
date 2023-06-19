@@ -1,10 +1,9 @@
 import { Spinner, Stack } from "@fluentui/react";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getIntelliData } from "../../api/post";
 import SideBar from "../../components/side-bar/side-bar";
 import { convertIntelliData } from "../../utils/pump";
-import { useInterval } from "../../utils/utils";
 import "./main.css";
 // const SiteCanvas = lazy(() =>
 //   import("../../components/site-canvas/site-canvas")
@@ -34,13 +33,13 @@ function Main() {
   };
 
   // just first call
-  useEffect(() => {
-    callAPI(true);
-  }, []);
+  // useEffect(() => {
+  //   callAPI(true);
+  // }, []);
 
-  useInterval(() => {
-    callAPI(false);
-  }, 1000 * interval);
+  // useInterval(() => {
+  //   callAPI(false);
+  // }, 1000 * interval);
 
   return (
     <Stack horizontal wrap verticalFill className="main-page">

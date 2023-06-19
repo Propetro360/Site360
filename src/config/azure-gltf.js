@@ -5,19 +5,19 @@ const isMob = isMobile();
 // gltf-pipeline -i pmpdeci.glb --draco.compressionLevel 3
 
 const LOW_MODELS = {
-  MISSILE: "https://site3d.blob.core.windows.net/site3d-models/missileRed.glb",
-  TRUCK: "https://site3d.blob.core.windows.net/site3d-models/pmpsmall.glb",
-  WELL_HEAD: "https://site3d.blob.core.windows.net/site3d-models/threeWell.glb",
-  DATA_VAN: "https://site3d.blob.core.windows.net/site3d-models/dVan.glb",
-  BLENDER: "https://site3d.blob.core.windows.net/site3d-models/blenderS.glb",
+  MISSILE: "https://s3.tebi.io/blobs/missile_p.glb",
+  TRUCK: "https://s3.tebi.io/blobs/pump.glb",
+  WELL_HEAD: "https://s3.tebi.io/blobs/well_head.glb",
+  DATA_VAN: "https://s3.tebi.io/blobs/data_van.glb",
+  BLENDER: "https://s3.tebi.io/blobs/blender_p.glb",
 };
 
 const HIGH_MODELS = {
-  MISSILE: "https://site3d.blob.core.windows.net/site3d-models/missileRed.glb",
-  TRUCK: "https://site3d.blob.core.windows.net/site3d-models/pmpsmall.glb",
-  WELL_HEAD: "https://site3d.blob.core.windows.net/site3d-models/threeWell.glb",
-  DATA_VAN: "https://site3d.blob.core.windows.net/site3d-models/dVan.glb",
-  BLENDER: "https://site3d.blob.core.windows.net/site3d-models/blenderS.glb",
+  MISSILE: "https://s3.tebi.io/blobs/missile_p.glb",
+  TRUCK: "https://s3.tebi.io/blobs/pump.glb",
+  WELL_HEAD: "https://s3.tebi.io/blobs/well_head.glb",
+  DATA_VAN: "https://s3.tebi.io/blobs/data_van.glb",
+  BLENDER: "https://s3.tebi.io/blobs/blender_p.glb",
 };
 
 export const MODELS = isMob ? LOW_MODELS : HIGH_MODELS;

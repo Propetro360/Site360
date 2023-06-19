@@ -1,5 +1,5 @@
 export const siteCamera = {
-  position: [10, 15, 40],
+  position: [30, 15, 50],
   fov: 50,
   near: 0.01,
   far: 1000,

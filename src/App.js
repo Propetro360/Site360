@@ -32,3 +32,14 @@ export default App;
 Object.entries(MODELS)
   .filter((x) => !isMob || x[0] !== "BLENDER")
   .forEach((x) => useGLTF.preload(x[1]));
+
+// let i = (p % n > 0 ? p % n : n) - 1;
+//     let row = Math.ceil(p / n);
+//     let arr = [];
+//     while (i > 0 && row < n) {
+//       arr.push(`-${p} -${row * n + i}`);
+//       arr.push(`-${p} -${row * n + i}`);
+//       i--;
+//       row++;
+//     }
+//     return arr;
