@@ -16,6 +16,12 @@ npm install (Do this only in the start)
 
 npm start
 
+# Once a stable change has been done, run following for deploying to cloud
+
+ npm run build
+
+ npm run deploy
+
 # when editing the code, its recommended to follow [git-rebase strategy](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=What%20is%20git%20rebase%3F,of%20a%20feature%20branching%20workflow)
 
 1. Always create new branches for a solid feature - feature/feature-name
