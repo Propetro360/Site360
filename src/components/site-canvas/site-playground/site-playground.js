@@ -7,8 +7,8 @@ import { MODELS } from "../../../config/azure-gltf";
 import { PUMPS as HARD_CODED_PUMPS } from "../../../config/pumps";
 
 import CloudGLTF from "../../../shared/cloud-gtlf/cloud-gtlf";
+import TruckCloudGTLF from "../../../shared/truck-cloud-gtlf/truck-cloud-gtlf";
 import { isMobile } from "../../../utils/utils";
-// import TruckCloudGTLF from "../../../shared/truck-cloud-gtlf/truck-cloud-gtlf";
 import { Node, Nodes } from "../../nodes/node";
 import {
   BLENDER_VAN_POS,
@@ -23,8 +23,6 @@ import {
   WELL_HEAD_POS,
 } from "./site-scene";
 
-import TruckCloudGTLF from "../../../shared/truck-cloud-gtlf/truck-cloud-gtlf";
-
 function SitePlayGround(props) {
   const isMob = isMobile();
   const mRef = useRef(null);
@@ -37,7 +35,9 @@ function SitePlayGround(props) {
   const { scene } = useGLTF(MODELS.TRUCK);
   const cam = useThree(({ camera }) => camera);
   const cont = useThree(({ controls }) => controls);
-  const PUMPS = props.pumpsData.length ? props.pumpsData : HARD_CODED_PUMPS;
+  const PUMPS = props.pumpsData.length
+    ? props.pumpsData
+    : HARD_CODED_PUMPS.slice(0, 7);
   const { copiedScene } = useMemoisedScene(scene);
   const invalidate = useThree(({ invalidate }) => invalidate);
   const isOnFocus = (pump) =>
