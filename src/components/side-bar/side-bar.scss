@@ -1,12 +1,19 @@
 @import "office-ui-fabric-core/dist/sass/References";
 
 .side-bar {
-  width: 15rem;
+  width: 14rem;
   transition-delay: 0s;
+ 
+  &.collapsed{
+    width: 0;
+    transition: width 0.1s;
+  }
+
   .side-bar-list {
     height: 70vh;
+    
     .side-bar-list-item {
-      border-radius: 2px;
+      border-radius: 5px;
 
       &:hover {
         box-shadow: $ms-depth-shadow-16;
@@ -14,6 +21,17 @@
     }
   }
 }
+.uncollapse-btn {
+  display: block; // Hide the uncollapse button by default
+  position: absolute;
+  top: 0.2rem;
+  left: 12.24rem;
+  z-index: 999999999999;
+}
+
+// .collapsed .uncollapse-btn {
+//   display: block; // Show the uncollapse button when sidebar is collapsed
+// }
 
 .search-bar {
   border-color: rgb(97, 97, 97);
