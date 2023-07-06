@@ -1,12 +1,27 @@
-import { Stack } from "@fluentui/react";
+import { Stack, IconButton } from "@fluentui/react";
 import * as React from "react";
 import SiteList from "../site-list/site-list";
 import "./side-bar.scss";
 
-function SideBar() {
+function SideBar(props) {
+  
+
+  const toggleSidebar = () => {
+    props.setCollapsed(!props.collapsed);
+  };
+
   return (
-    <Stack className="side-bar ms-hiddenLgDown" verticalFill>
-      <h3 className="px-2">Sites</h3>
+    <Stack className={`side-bar ${props.collapsed ? "collapsed" : ""}`} verticalFill>
+      <h3 className="px-2">
+        <IconButton
+        className="uncollapse-btn"
+          iconProps={{ iconName: "CollapseMenu" }}
+          onClick={toggleSidebar}
+        />
+        <span style={{ fontSize: '25px' }}>(Sites)</span>
+  <span style={{ marginRight: '96px' }}></span>
+  <span style={{ fontSize: '10px', position: 'relative', top: '-25px', right:'-178px' }}>(Collapse)</span>
+      </h3>
       <SiteList />
     </Stack>
   );

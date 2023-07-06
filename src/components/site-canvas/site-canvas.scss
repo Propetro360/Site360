@@ -21,14 +21,14 @@
   z-index: 99999999;
   position: absolute;
   bottom: 0.5rem;
-  right: 1rem;
+  right: 0.5rem;
 }
 
 .pump-stats {
-  z-index: 99999999;
+  z-index: 9999;
   position: absolute;
-  bottom: 4rem;
-  left: 1rem;
+  top: 1.3rem;
+  left: 1.5rem;
 
   span {
     font-family: consolas, monaco, monospace;

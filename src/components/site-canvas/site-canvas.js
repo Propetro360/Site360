@@ -1,5 +1,5 @@
 import { Stack, Text } from "@fluentui/react";
-import { AdaptiveEvents } from "@react-three/drei";
+import { AdaptiveEvents,Stats } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Leva, useControls } from "leva";
 import { lazy, Suspense, useEffect, useRef } from "react";
@@ -41,7 +41,10 @@ function SiteCanvas(props) {
         frameloop="demand"
         className="ms-depth-64"
         shadows
-        camera={siteCamera}
+        camera={{
+        position: [20, 15, 45], // Adjust the Z position to set the render distance
+        near: 1, // Adjust the near clipping plane
+        far: 115,}}// Adjust the far clipping plane
         performance={perf}
         onPointerMissed={(e) => {
           e.stopPropagation();
@@ -56,7 +59,7 @@ function SiteCanvas(props) {
             domNodeRef={domNodeRef}
           />
         </Suspense>
-
+        <Stats showPanel={0} className="stats" {...props} />
         <AdaptiveEvents />
 
         <CameraHandler controlStyle={props.cameraType} />
@@ -76,7 +79,7 @@ function SiteCanvas(props) {
           )
             .filter((x, i) => !!x[1] && !HIDE_KEYS.includes(x[0]))
             .map((e, i) => (
-              <Text key={i} block variant="small">
+              <Text key={i} block variant="large">
                 <span className="ms-fontWeight-bold ms-fontColor-white">
                   {e[0]}: {e[1]} {UNIT_MAP[e[0]]}
                 </span>

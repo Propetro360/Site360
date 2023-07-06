@@ -1,8 +1,7 @@
 export const siteCamera = {
-  position: [30, 15, 50],
-  fov: 50,
+  fov: 20,
   near: 0.01,
-  far: 1000,
+  far: 140,
 };
 
 export const canvasStyle = {
