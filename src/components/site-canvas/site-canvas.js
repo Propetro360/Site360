@@ -1,5 +1,5 @@
 import { Stack, Text } from "@fluentui/react";
-import { AdaptiveEvents,Stats } from "@react-three/drei";
+import { AdaptiveEvents, Stats } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Leva, useControls } from "leva";
 import { lazy, Suspense, useEffect, useRef } from "react";
@@ -42,9 +42,10 @@ function SiteCanvas(props) {
         className="ms-depth-64"
         shadows
         camera={{
-        position: [20, 15, 45], // Adjust the Z position to set the render distance
-        near: 1, // Adjust the near clipping plane
-        far: 115,}}// Adjust the far clipping plane
+          position: [20, 15, 45], // Adjust the Z position to set the render distance
+          near: 1, // Adjust the near clipping plane
+          far: 115,
+        }}// Adjust the far clipping plane
         performance={perf}
         onPointerMissed={(e) => {
           e.stopPropagation();
@@ -53,11 +54,11 @@ function SiteCanvas(props) {
       >
         <Suspense fallback={<CircleLoader text="blender" />}>
           <SiteLights />
-          <SitePlayGround
+          {props.pumpsData.length > 0 ? <SitePlayGround
             {...props}
             selectionOptions={selectionOptions}
             domNodeRef={domNodeRef}
-          />
+          /> : null}
         </Suspense>
         <Stats showPanel={0} className="stats" {...props} />
         <AdaptiveEvents />
@@ -75,7 +76,7 @@ function SiteCanvas(props) {
       {props.selected ? (
         <div className="pump-stats">
           {Object.entries(
-            PUMPS.find((x) => x["Pump Position"] === props.selected)
+            props.pumpsData.find((x) => x["Pump Position"] === props.selected)
           )
             .filter((x, i) => !!x[1] && !HIDE_KEYS.includes(x[0]))
             .map((e, i) => (
