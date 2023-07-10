@@ -33,7 +33,7 @@ export default function TruckParams({ ...props }) {
         <BBAnchor anchor={[0, 0, 0]}>
           <Html>
             <div className="content">
-              {props.pump["Horse Power"].toFixed(1) +
+              {Number(props.pump["Horse Power"]).toFixed(1) +
                 UNIT_MAP["Calc Horse Power"]}
             </div>
           </Html>

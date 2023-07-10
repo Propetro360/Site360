@@ -1,6 +1,5 @@
 import { Spinner, Stack } from "@fluentui/react";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getIntelliData } from "../../api/post";
 import SideBar from "../../components/side-bar/side-bar";
 import { convertIntelliData } from "../../utils/pump";
@@ -8,9 +7,8 @@ import "./main.css";
 // const SiteCanvas = lazy(() =>
 //   import("../../components/site-canvas/site-canvas")
 // );
-
 import SiteCanvas from "../../components/site-canvas/site-canvas";
-
+import { useInterval } from "../../utils/utils"
 function Main() {
   const [cameraType, setCameraType] = useState("orbit");
   const [pumpsData, setPumpsData] = useState([]);
@@ -19,7 +17,8 @@ function Main() {
   const [alertedParts, setAlertedParts] = useState(null);
   const [loading, setLoading] = useState(null);
   const [interval, setInterval] = useState(100);
-
+  const [collapsed, setCollapsed] = useState(false);
+  
   const callAPI = (shouldLoad) => {
     shouldLoad ?? setLoading(true);
     getIntelliData().then((d) => {
@@ -33,22 +32,21 @@ function Main() {
   };
 
   // just first call
-  // useEffect(() => {
-  //   callAPI(true);
-  // }, []);
+  useEffect(() => {
+    callAPI(true);
+  }, []);
 
-  // useInterval(() => {
-  //   callAPI(false);
-  // }, 1000 * interval);
+  useInterval(() => {
+    callAPI(false);
+  }, 1000 * interval);
 
   return (
     <Stack horizontal wrap verticalFill className="main-page">
-      {/* <ExpandBtn showSideBar={showSideBar} setShowSideBar={setShowSideBar} /> */}
-
+      {/* <ExpandBtn showSideBar={showSideBar} setShowSideBar={setShowSideBar} />  */}
       <Stack.Item grow={1} className="p-0 ms-hiddenMdDown position-relative">
-        <SideBar />
+        <SideBar collapsed={collapsed} setCollapsed={setCollapsed} />
       </Stack.Item>
-      <Stack.Item grow={1} className="pb-2 m-2">
+      <Stack.Item className="pb-2 m-2 " style={{ width: collapsed ? "98.3vw" : "84vw" }}>
         {!loading ? (
           <SiteCanvas
             cameraType={cameraType}
