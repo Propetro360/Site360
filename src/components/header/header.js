@@ -2,10 +2,8 @@ import { useIsAuthenticated } from "@azure/msal-react";
 import {} from "@fluentui/react";
 import { SignInButton } from "../../shared/sign-in-btn";
 import { SignOutButton } from "../../shared/sign-out-btn";
-
 import { OverflowSet, Stack } from "@fluentui/react";
-
-import { CommandBarButton } from "@fluentui/react/lib/Button";
+import { PrimaryButton } from "@fluentui/react/lib/Button";
 import SidePanelBtn from "../side-panel/side-panel";
 import "./header.css";
 
@@ -16,11 +14,11 @@ function Header() {
       return item.onRender(item);
     }
     return (
-      <CommandBarButton
-        className="ms-hiddenLgDown"
-        iconProps={{ iconName: item.icon }}
-        menuProps={item.subMenuProps}
-        text={item.name}
+      <PrimaryButton
+        className = "ms-hiddenLgDown"
+        iconProps = {{ iconName: item.icon }}
+        menuProps = {item.subMenuProps}
+        text = {item.name}
       />
     );
   };
@@ -35,22 +33,23 @@ function Header() {
       },
     };
     return (
-      <CommandBarButton
-        ariaLabel="More items"
-        styles={buttonStyles}
-        menuIconProps={{ iconName: "More" }}
-        menuProps={{ items: overflowItems }}
+      <PrimaryButton
+        ariaLabel = "More items"
+        styles = {buttonStyles}
+        className = "ms-Button ms-Button--primary root-122"
+        menuIconProps = {{ iconName: "More" }}
+        menuProps = {{ items: overflowItems }}
       />
     );
   };
 
   return (
-    <div className="app-header">
+    <div className = "app-header">
       <Stack
         horizontal
-        verticalAlign="center"
-        horizontalAlign="space-between"
-        tokens={{ padding: "0.75rem" }}
+        verticalAlign = "center"
+        horizontalAlign = "space-between"
+        tokens = {{ padding: "0.75rem" }}
       >
         <SidePanelBtn />
         <img
@@ -59,7 +58,7 @@ function Header() {
           style={{ width: "14rem" }}
         />
         <OverflowSet
-          items={[
+          items = {[
             {
               key: "site35",
               name: "Site 3D",
@@ -77,8 +76,8 @@ function Header() {
               },
             },
           ]}
-          onRenderOverflowButton={onRenderOverflowButton}
-          onRenderItem={onRenderItem}
+          onRenderOverflowButton = {onRenderOverflowButton}
+          onRenderItem = {onRenderItem}
         />
       </Stack>
     </div>
