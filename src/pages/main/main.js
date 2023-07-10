@@ -39,7 +39,6 @@ function Main() {
   // useEffect(() => {
   //   callAPI(true);
   // }, []);
-
   // useInterval(() => {
   //   callAPI(false);
   // }, 1000 * interval);
