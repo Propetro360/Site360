@@ -9,7 +9,6 @@ export const useMemoisedScene = (scene, isFast) => {
     const smallObj = [];
     scene.traverse((o) => {
       if (!o.isMesh) {
-        console.log(o);
         return;
       }
       var prevMaterial = o.material;
@@ -43,20 +42,22 @@ export const useMemoisedScene = (scene, isFast) => {
   return { copiedScene };
 };
 
-export const ROTATION_LEFT = [0, -Math.PI / 2, 0];
-export const ROTATION_RIGHT = [0, Math.PI / 2, 0];
+export const ROTATION_LEFT = [0, Math.PI / 2, 0];
+export const ROTATION_RIGHT = [0, -Math.PI / 2, 0];
+const SEPERATION_UNIT = 18;
+const DISTANCE_BTW_PUMPTRUCK = 5;
 
 export const getPos = (LEFT_POS_START, i, isOnFocus) => {
-  return [
-    LEFT_POS_START < i ? 15 : -15,
+  return [ 
+    LEFT_POS_START <= i ? SEPERATION_UNIT : -SEPERATION_UNIT,
     0 + isOnFocus * 10,
-    (i % LEFT_POS_START) * 5,
+    (i % LEFT_POS_START) * DISTANCE_BTW_PUMPTRUCK,
   ];
 };
 
 export const WELL_HEAD_POS = [0, -1, -20];
-export const DATA_VAN_POS = [15, 1, -10];
-export const BLENDER_VAN_POS = [10, -1, 35];
-export const MISSILE_POS = [0, 0, 20];
-export const MISSILE_NODE_POS = [0, 1, 20];
-export const DATA_VAN_ROT = [0, Math.PI / 2, 0];
+export const DATA_VAN_POS = [15, 0, -30];
+export const BLENDER_VAN_POS = [4, 0, 120];
+export const MISSILE_POS = [0, -2, 45];
+export const MISSILE_NODE_POS = [0, -1, 40];
+export const DATA_VAN_ROT = [0, Math.PI / 1, 0];

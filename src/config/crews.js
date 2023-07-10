@@ -1,5 +1,5 @@
 export const CREWS = [
-  {
+  { // Crew #1
     id: "1",
     name: "Platinum",
     isActive: true,
@@ -28,7 +28,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #2
     id: "3",
     name: "Green",
     isActive: false,
@@ -62,7 +62,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #3
     id: "5",
     name: "Navy",
     isActive: false,
@@ -91,7 +91,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #4
     id: "9",
     name: "Bronze",
     isActive: false,
@@ -120,7 +120,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #5
     id: "15",
     name: "Purple",
     isActive: false,
@@ -149,7 +149,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #6
     id: "16",
     name: "White",
     isActive: false,
@@ -178,7 +178,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #7
     id: "17",
     name: "Black",
     isActive: false,
@@ -207,7 +207,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #8
     id: "20",
     name: "Red",
     isActive: false,
@@ -236,7 +236,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #9
     id: "29",
     name: "PPS6",
     isActive: false,
@@ -265,7 +265,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #10
     id: "30",
     name: "PPS1",
     isActive: false,
@@ -294,7 +294,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #11
     id: "31",
     name: "PPS4",
     isActive: false,
@@ -323,7 +323,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #12
     id: "32",
     name: "PPS2",
     isActive: false,
@@ -352,7 +352,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #13
     id: "33",
     name: "PPS5",
     isActive: false,
@@ -381,7 +381,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #14
     id: "34",
     name: "PPS3",
     isActive: false,
@@ -410,7 +410,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  {// Crew #15
     id: "38",
     name: "TestFacility",
     isActive: false,
@@ -439,7 +439,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #16
     id: "44",
     name: "PPS6-B",
     isActive: false,
@@ -470,7 +470,7 @@ export const CREWS = [
     },
     favorite: false,
   },
-  {
+  { // Crew #17
     id: "47",
     name: "PPS4-B",
     isActive: false,

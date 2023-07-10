@@ -35,9 +35,7 @@ function SitePlayGround(props) {
   const { scene } = useGLTF(MODELS.TRUCK);
   const cam = useThree(({ camera }) => camera);
   const cont = useThree(({ controls }) => controls);
-  const PUMPS = props.pumpsData.length
-    ? props.pumpsData
-    : HARD_CODED_PUMPS.slice(0, 7);
+  const [displayedPumps, setDisplayedPumps] = useState([]);
   const { copiedScene } = useMemoisedScene(scene);
   const invalidate = useThree(({ invalidate }) => invalidate);
   const isOnFocus = (pump) =>
@@ -46,6 +44,12 @@ function SitePlayGround(props) {
   useEffect(() => {
     focussedTruck && props.setSelected(focussedTruck["Pump Position"]);
   }, [focussedTruck, props]);
+  
+  console.log(props.pumpsData)
+  useEffect(() => {
+    // Update the displayed pumps when the prop changes
+    setDisplayedPumps(props.pumpsData);
+  }, []);
 
   function restoreCamera() {
     cam.position.set(
@@ -54,21 +58,19 @@ function SitePlayGround(props) {
       prevCam.position.z
     );
     cont?.reset();
-
     invalidate();
   }
 
   const isActive = (pump) => pump["Pump Position"] === props.selected;
 
-  const LEFT_POS_START = PUMPS.length / 2;
-
+  const LEFT_POS_START = Math.floor(displayedPumps.length / 2);
   const selected = hovered ? [hovered] : undefined;
 
   return (
     <>
       <Nodes>
         <Suspense fallback={null}>
-          {PUMPS.map((pump, i) => {
+          {displayedPumps.map((pump, i) => {
             const [x, y, z] = getPos(
               LEFT_POS_START,
               i,
@@ -77,7 +79,7 @@ function SitePlayGround(props) {
             );
             return (
               <TruckCloudGTLF
-                key={pump["Pump Position"]}
+                key={pump["Pump Position"] + "NEW"}
                 position={[x, y, z]}
                 onClick={() => {
                   props.setSelected(pump["Pump Position"]);
@@ -108,10 +110,10 @@ function SitePlayGround(props) {
                   focussedTruck &&
                   pump["Pump Position"] === focussedTruck["Pump Position"]
                 }
-                scene={copiedScene}
+                scene={copiedScene.clone()}
                 pump={pump}
                 setAlertedParts={props.setAlertedParts}
-                rotation={LEFT_POS_START < i ? ROTATION_LEFT : ROTATION_RIGHT}
+                rotation={LEFT_POS_START <= i ? ROTATION_LEFT : ROTATION_RIGHT}
                 cloudGlbURL={MODELS.TRUCK}
                 scale={focussedTruck ? 2 : 1}
               />
@@ -161,7 +163,7 @@ function SitePlayGround(props) {
             fast
             onHover={onHover}
             position={BLENDER_VAN_POS}
-            rotation={ROTATION_RIGHT}
+            rotation={ROTATION_LEFT}
           />
         ) : null}
       </Nodes>
