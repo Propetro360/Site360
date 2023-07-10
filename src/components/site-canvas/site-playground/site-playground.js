@@ -12,6 +12,7 @@ import { isMobile } from "../../../utils/utils";
 import { Node, Nodes } from "../../nodes/node";
 import {
   BLENDER_VAN_POS,
+  BLENDER_VAN_ROT,
   DATA_VAN_POS,
   DATA_VAN_ROT,
   getPos,
@@ -36,7 +37,9 @@ function SitePlayGround(props) {
   const { scene } = useGLTF(MODELS.TRUCK);
   const cam = useThree(({ camera }) => camera);
   const cont = useThree(({ controls }) => controls);
-  const [displayedPumps, setDisplayedPumps] = useState([]);
+  const PUMPS = props.pumpsData.length
+    ? props.pumpsData
+    : HARD_CODED_PUMPS.slice(0, 20);
   const { copiedScene } = useMemoisedScene(scene);
   const invalidate = useThree(({ invalidate }) => invalidate);
   const isOnFocus = (pump) =>
@@ -166,7 +169,7 @@ function SitePlayGround(props) {
             fast
             onHover={onHover}
             position={BLENDER_VAN_POS}
-            rotation={ROTATION_LEFT}
+            rotation={BLENDER_VAN_ROT}
           />
         ) : null}
       </Nodes>
@@ -179,7 +182,7 @@ function SitePlayGround(props) {
           edgeStrength={5}
         />
       </EffectComposer>
-      <Html left portal={props.domNodeRef}>
+      <Html  style={{left:60,top:"100%"}} portal={props.domNodeRef}>
         {focussedTruck ? (
           <div>
             <IconButton

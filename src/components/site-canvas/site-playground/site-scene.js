@@ -1,10 +1,8 @@
 import { useMemo } from "react";
 import { MeshBasicMaterial, MeshStandardMaterial } from "three";
 import { isMobile } from "../../../utils/utils";
-
 export const useMemoisedScene = (scene, isFast) => {
   const isMob = isMobile();
-
   const copiedScene = useMemo(() => {
     const smallObj = [];
     scene.traverse((o) => {

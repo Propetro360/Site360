@@ -11,15 +11,17 @@ export function TruckCloudGTLFGroup({ ...props }) {
   if (props.index > 400) {
     return;
   }
-  const onPointerOver = (e) => {
-    e.stopPropagation();
-
-    if (!props.show) {
-      return;
-    }
+ const onPointerOver = (e) => {
+  e.stopPropagation();
+  if (!props.show) {
+    return;
+  }
+  const highlightNodes = ["engine","trans","fe","pe","chassis"];
+  if (highlightNodes.includes(props.node.name)) {
     props.onHover(meshRef);
-    set(true);
-  };
+  }
+  set(true);
+};
 
   const onPointerOut = (e) => {
     e.stopPropagation();

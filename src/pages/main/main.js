@@ -55,7 +55,6 @@ function Main() {
       shouldLoad ?? setLoading(false);
     });
   };
-
   useEffect(() => {
     pullAPI(true);
   }, []);
@@ -95,5 +94,4 @@ function Main() {
     </Stack>
   );
 }
-
 export default Main;
