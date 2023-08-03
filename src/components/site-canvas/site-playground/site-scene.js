@@ -50,14 +50,15 @@ const DISTANCE_BTW_PUMPTRUCK = 5;
 export const getPos = (LEFT_POS_START, i, isOnFocus) => {
   return [ 
     LEFT_POS_START <= i ? SEPERATION_UNIT : -SEPERATION_UNIT,
-    0 + isOnFocus * 10,
+    3 + isOnFocus * 10,
     (i % LEFT_POS_START) * DISTANCE_BTW_PUMPTRUCK,
   ];
 };
 
-export const WELL_HEAD_POS = [0, 0, -20];
-export const DATA_VAN_POS = [15, 2, -25];
-export const BLENDER_VAN_POS = [4, 0, 85];
-export const MISSILE_POS = [0, 0, 45];
-export const MISSILE_NODE_POS = [0, 0, 45];
+export const WELL_HEAD_POS = [0, 3, -10];
+export const DATA_VAN_POS = [30, 4.9, -6];
+export const BLENDER_VAN_POS = [8, 3, 60];
+export const MISSILE_POS = [0, 3, 30];
+export const MISSILE_NODE_POS = [-0.4, 4.2, 25];
 export const DATA_VAN_ROT = [0, Math.PI / 1, 0];
+export const B_VAN_ROT = [0, Math.PI / 2, 0];
