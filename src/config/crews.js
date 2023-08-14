@@ -17,13 +17,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Endeavor",
+        data: "Endeavor Energy",
       },
       stageNumber: {
         data: 15,
       },
       well_name: {
-        data: "CARBON 12 -13 UNIT 1 - 222",
+        data: "Midway 2-35 C1 #233",
       },
     },
     favorite: false,
@@ -50,14 +50,14 @@ export const CREWS = [
         auto: false,
       },
       client: {
-        data: "Titus",
+        data: "Admiral Permian Resources",
         auto: false,
       },
       stageNumber: {
         data: 40,
       },
       well_name: {
-        data: "Brennan Dale FS - 304H Zipper",
+        data: "Thunderball 2WA",
       },
     },
     favorite: false,
@@ -80,13 +80,13 @@ export const CREWS = [
         data: 15000,
       },
       client: {
-        data: "EOG",
+        data: "EOG Resources",
       },
       stageNumber: {
         data: 3,
       },
       well_name: {
-        data: "Pegasus 3 Fed Com - 701H BS",
+        data: "RESOLUTE 12 FED COM 519H",
       },
     },
     favorite: false,
@@ -109,13 +109,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Centennial",
+        data: "Permian Resources",
       },
       stageNumber: {
         data: 48,
       },
       well_name: {
-        data: "Barracuda",
+        data: "Vintage E C04H",
       },
     },
     favorite: false,
@@ -138,13 +138,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Endeavor",
+        data: "Endeavor Energy",
       },
       stageNumber: {
         data: 46,
       },
       well_name: {
-        data: "WTH 24-13 - 281",
+        data: "Midway 2-35 A #113",
       },
     },
     favorite: false,
@@ -167,13 +167,13 @@ export const CREWS = [
         data: 15000,
       },
       client: {
-        data: "XTO",
+        data: "XTO Energy",
       },
       stageNumber: {
         data: 13,
       },
       well_name: {
-        data: "PLU 28-21 Big Sinks - 107H",
+        data: "ST CLOUD 76 3031 TG 502H",
       },
     },
     favorite: false,
@@ -196,13 +196,13 @@ export const CREWS = [
         data: 15000,
       },
       client: {
-        data: "XTO",
+        data: "XTO Energy",
       },
       stageNumber: {
         data: 46,
       },
       well_name: {
-        data: "Silver - 703H",
+        data: "Cowden 39-03 West Unit 0301BH",
       },
     },
     favorite: false,
@@ -225,13 +225,13 @@ export const CREWS = [
         data: 15000,
       },
       client: {
-        data: "XTO",
+        data: "XTO Energy",
       },
       stageNumber: {
         data: 1,
       },
       well_name: {
-        data: "Dire Wolf Unit 2 - 1301BH BS",
+        data: "TXL 11 Unit 1 0231SH",
       },
     },
     favorite: false,
@@ -254,13 +254,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Pioneer",
+        data: "Pioneer Natural Resources",
       },
       stageNumber: {
         data: 79,
       },
       well_name: {
-        data: "NORTH BROOK 38-37 EC - 103H",
+        data: "Bast Bird 28G 7H",
       },
     },
     favorite: false,
@@ -283,13 +283,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Pioneer",
+        data: "Pioneer Natural Resources",
       },
       stageNumber: {
         data: 5,
       },
       well_name: {
-        data: "Brook B 1N - B2H - B-Section",
+        data: "Erwin Murray 45H 8H",
       },
     },
     favorite: false,
@@ -341,13 +341,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Pioneer",
+        data: "Pioneer Natural Resources",
       },
       stageNumber: {
         data: 24,
       },
       well_name: {
-        data: "Woody 31 - B2H B-Section",
+        data: "KENDALL 23-11H 8H",
       },
     },
     favorite: false,
@@ -370,13 +370,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Pioneer",
+        data: "Pioneer Natural Resources",
       },
       stageNumber: {
         data: 2,
       },
       well_name: {
-        data: "Yater 10 - F 206H B-Section",
+        data: "Welch Cox W39L 212H",
       },
     },
     favorite: false,
@@ -399,13 +399,13 @@ export const CREWS = [
         data: 10000,
       },
       client: {
-        data: "Pioneer",
+        data: "Pioneer Natural Resources",
       },
       stageNumber: {
         data: 31,
       },
       well_name: {
-        data: "Driver C NW9 - B 2H",
+        data: "BRUNSON 36-13B 102H",
       },
     },
     favorite: false,

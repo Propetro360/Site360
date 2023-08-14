@@ -1,97 +1,78 @@
-.dischPressure-content {
+.sand_concentration {
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
-  background: #000000;
+  background: #ff840080;
   color: #f0f0f0;
   padding: 3px;
   border-radius: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 5rem;
+  min-width: 3rem;
 }
-
-.engineRPM-content {
+.total_rate {
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
-  background: #1500ffcc;
+  background: #0091ff7e;
   color: #f0f0f0;
   padding: 3px;
   border-radius: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 5rem;
+  min-width: 3rem;
 }
-
-.engine-content {
+.pressure_one {
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
-  background: #b7ff00cc;
+  background: #2b00ff7e;
   color: #f0f0f0;
   padding: 3px;
   border-radius: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 4rem;
-}
-
-.transGear-content {
+  min-width: 3rem;
+} 
+.pressure_two {
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
-  background: #ff9500cc;
+  background: hsla(97, 100%, 50%, 0.505);
   color: #f0f0f0;
   padding: 3px;
   border-radius: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 4rem;
-}
-
-.horsePower-content {
+  min-width: 3rem;
+} 
+.pressure_three {
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
-  background: #ff0000cc;
+  background: #000000c0;
   color: #f0f0f0;
   padding: 3px;
   border-radius: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 4rem;
-}
-
-.pumpRate-content {
+  min-width: 3rem;
+} 
+.pressure_four {
   cursor: pointer;
   font-size: 12px;
   font-weight: 300;
-  background: #7300ffcc;
+  background: #004c3182;
   color: #f0f0f0;
   padding: 3px;
   border-radius: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 5rem;
-}
-
-.chassis-content {
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 300;
-  background: #ff0000cc;
-  color: #f0f0f0;
-  padding: 3px;
-  border-radius: 2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-width: 3.75rem;
-}
+  min-width: 3rem;
+} 

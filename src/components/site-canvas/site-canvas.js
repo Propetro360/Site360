@@ -54,7 +54,8 @@ function SiteCanvas(props) {
       >
         <Suspense fallback={<CircleLoader text="blender" />}>
           <SiteLights />
-          {props.pumpsData.length > 0 ? <SitePlayGround
+          {props.pumpsData.length > 0 ?
+           <SitePlayGround
             {...props}
             selectionOptions={selectionOptions}
             domNodeRef={domNodeRef}

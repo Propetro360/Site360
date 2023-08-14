@@ -1,14 +1,15 @@
 import { Spinner, Stack } from "@fluentui/react";
-import { useState, useEffect } from "react";
-import { getIntelliData } from "../../api/post";
+import { useState, useEffect, useContext } from "react";
+import { getIntelliData, getPulledData } from "../../api/post";
 import SideBar from "../../components/side-bar/side-bar";
-import { convertIntelliData } from "../../utils/pump";
+import { convertIntelliData, convertPulledData } from "../../utils/pump";
 import "./main.css";
 // const SiteCanvas = lazy(() =>
 //   import("../../components/site-canvas/site-canvas")
 // );
 import SiteCanvas from "../../components/site-canvas/site-canvas";
-import { useInterval } from "../../utils/utils"
+import { useInterval } from "../../utils/utils";
+import { SiteConfigContext } from "../../utils/site-config-context";
 function Main() {
   const [cameraType, setCameraType] = useState("orbit");
   const [pumpsData, setPumpsData] = useState([]);
@@ -16,28 +17,51 @@ function Main() {
   const [isAllSelected, setIsAllSelected] = useState(null);
   const [alertedParts, setAlertedParts] = useState(null);
   const [loading, setLoading] = useState(null);
-  const [interval, setInterval] = useState(100);
+  const [interval, setInterval] = useState(30);
   const [collapsed, setCollapsed] = useState(false);
-  
-  const callAPI = (shouldLoad) => {
+  const { setPumpsData: setContextPumpsData } = useContext(SiteConfigContext);
+
+  // const callAPI = (shouldLoad) => {
+  //   shouldLoad ?? setLoading(true);
+  //   getIntelliData().then((d) => {
+
+  //     const copy = convertIntelliData(d);
+  //     console.log(copy)
+  //     setPumpsData(copy);
+  //     if (!copy.length) {
+  //       setInterval(500);
+  //     }
+  //     shouldLoad ?? setLoading(false);
+  //   });
+  // };
+
+  // just first call
+  // useEffect(() => {
+  //   callAPI(true);
+  // }, []);
+
+  // useInterval(() => {
+  //   callAPI(false);
+  // }, 1000 * interval);
+
+  const pullAPI = (shouldLoad) => {
     shouldLoad ?? setLoading(true);
-    getIntelliData().then((d) => {
-      const copy = convertIntelliData(d);
-      setPumpsData(copy);
-      if (!copy.length) {
+    getPulledData().then((d) => {
+      setContextPumpsData(d);
+      setPumpsData(d);
+      if (!d.length) {
         setInterval(500);
       }
       shouldLoad ?? setLoading(false);
     });
   };
 
-  // just first call
   useEffect(() => {
-    callAPI(true);
+    pullAPI(true);
   }, []);
 
   useInterval(() => {
-    callAPI(false);
+    pullAPI(false);
   }, 1000 * interval);
 
   return (
@@ -46,7 +70,10 @@ function Main() {
       <Stack.Item grow={1} className="p-0 ms-hiddenMdDown position-relative">
         <SideBar collapsed={collapsed} setCollapsed={setCollapsed} />
       </Stack.Item>
-      <Stack.Item className="pb-2 m-2 " style={{ width: collapsed ? "98.3vw" : "84vw" }}>
+      <Stack.Item
+        className="pb-2 m-2 "
+        style={{ width: collapsed ? "98.3vw" : "84vw" }}
+      >
         {!loading ? (
           <SiteCanvas
             cameraType={cameraType}
