@@ -11,11 +11,19 @@ const defaultTruckConfig = {
 };
 export const SiteConfigContextProvider = ({ children }) => {
   const [truckConfig, setTruckConfig] = useState(defaultTruckConfig);
+  const [pumpsData, setPumpsData] = useState(defaultTruckConfig);
   const [isAllSelected, setAllSelected] = useState(null);
 
   return (
     <SiteConfigContext.Provider
-      value={{ truckConfig, setTruckConfig, isAllSelected, setAllSelected }}
+      value={{
+        truckConfig,
+        setTruckConfig,
+        isAllSelected,
+        setAllSelected,
+        pumpsData,
+        setPumpsData,
+      }}
     >
       {children}
     </SiteConfigContext.Provider>

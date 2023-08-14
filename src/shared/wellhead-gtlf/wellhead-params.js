@@ -1,11 +1,14 @@
 import { Icon } from "@fluentui/react";
 import { BBAnchor as DreiBBAnchor, Html } from "@react-three/drei";
+/*import { WELLHEAD_MAP } from "../../config/wellhead-mapping";
+import { BBAnchor } from "../bb-anchor";
+import { useContext, useEffect, useState } from "react";*/
 
 export default function WellheadParams({ ...props }) {
 
     return (
         <>
-            <DreiBBAnchor anchor={[-3.5, 1.25, 0]}>
+            <DreiBBAnchor anchor={[-7.5, 6, 0]}>
                 <Html>
                     <div className="sand_concentration">
                         <Icon iconName="HourGlass" />
@@ -13,7 +16,7 @@ export default function WellheadParams({ ...props }) {
                     </div>
                 </Html>
             </DreiBBAnchor>
-            <DreiBBAnchor anchor={[0.75, 1.25, 0]}>
+            <DreiBBAnchor anchor={[4.75, 6, 0]}>
                 <Html>
                     <div className="total_rate">
                         <Icon iconName="Settings" />
@@ -21,7 +24,7 @@ export default function WellheadParams({ ...props }) {
                     </div>
                 </Html>
             </DreiBBAnchor>
-            <DreiBBAnchor anchor={[-3.5, 2, 0]}>
+            <DreiBBAnchor anchor={[-7.5, 7.5, 0]}>
                 <Html>
                     <div className="pressure_one">
                         <Icon iconName="AutoRacing" />
@@ -29,7 +32,7 @@ export default function WellheadParams({ ...props }) {
                     </div>
                 </Html>
             </DreiBBAnchor>
-            <DreiBBAnchor anchor={[0.75, 2, 0]}>
+            <DreiBBAnchor anchor={[4.75, 7.5, 0]}>
                 <Html>
                     <div className="pressure_two">
                         <Icon iconName="AutoRacing" />
@@ -37,7 +40,7 @@ export default function WellheadParams({ ...props }) {
                     </div>
                 </Html>
             </DreiBBAnchor>
-            <DreiBBAnchor anchor={[-3.5, 0.5, 0]}>
+            <DreiBBAnchor anchor={[-7.5, 4.5, 0]}>
                 <Html>
                     <div className="pressure_three">
                         <Icon iconName="AutoRacing" />
@@ -45,7 +48,7 @@ export default function WellheadParams({ ...props }) {
                     </div>
                 </Html>
             </DreiBBAnchor>
-            <DreiBBAnchor anchor={[0.75, 0.5, 0]}>
+            <DreiBBAnchor anchor={[4.75, 4.5, 0]}>
                 <Html>
                     <div className="pressure_four">
                         <Icon iconName="AutoRacing" />

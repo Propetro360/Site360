@@ -1,3 +1,31 @@
+.dischPressure-content {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  background: #000000;
+  color: #f0f0f0;
+  padding: 3px;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 5rem;
+}
+
+.engineRPM-content {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  background: #1500ffcc;
+  color: #f0f0f0;
+  padding: 3px;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 5rem;
+}
+
 .engine-content {
   cursor: pointer;
   font-size: 12px;

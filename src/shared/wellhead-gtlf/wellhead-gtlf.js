@@ -54,6 +54,7 @@ export const WellHeadGTLF = forwardRef((props, ref) => {
         onPointerOut={onPointerOut}
       >
         <primitive object={copiedScene} />
+        {hovered ? <WellheadParams /> : null}
       </group>
     );
   }
@@ -73,11 +74,12 @@ export const WellHeadGTLF = forwardRef((props, ref) => {
           {...props}
           node={_}
           index={i}
-          onHover={() => props.onHover(ref)}
+          onPointerOver={onPointerOver}
+          onPointerOut={onPointerOut}
+          //onHover={() => props.onHover(ref)}
         />
       ))}
-      <WellheadParams />
-
+      {hovered ? <WellheadParams /> : null}
 
 
     </group>
@@ -116,15 +118,17 @@ function WellHeadGTLFGroup({ ...props }) {
       scale={props.node.scale}
       onPointerOver={(e) => {
         e.stopPropagation();
-        props.onHover(meshRef);
+        //props.onHover(meshRef);
+        props.onPointerOver(e);
       }}
       onPointerOut={(e) => {
         e.stopPropagation();
-        props.onHover(null);
+        //props.onHover(null);
+        props.onPointerOut(e);
       }}
       onClick={(e) => {
         e.stopPropagation();
-        props.onHover(meshRef);
+        //props.onHover(meshRef);
       }}
     >
       {props.node.children.length > 0 &&

@@ -3,9 +3,7 @@ export const HIDE_KEYS = [
   "Crew",
   "Engine Coolant Temp",
   "Engine Hours",
-  "Engine Load",
   "Engine Oil Pressure",
-  "Engine RPM",
   "FUEL RATE",
   "Calc Horse Power",
   "PE Oil Pressure",
@@ -24,4 +22,6 @@ export const SHOW_KEYS = [
   "Trans Gear",
   "FE Vibration",
   "PE Oil Pressure",
+  "Engine RPM",
+  "Engine Load",
 ];

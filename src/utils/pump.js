@@ -13,3 +13,7 @@ export const convertIntelliData = (d) => {
     }).filter(x => !!x)
     .sort((a, b) => a["Pump Position"].localeCompare(b["Pump Position"]));
 };
+
+export const convertPulledData = (d) => {
+  console.log(d);
+}; 

@@ -22,7 +22,6 @@ import {
   useMemoisedScene,
   WELL_HEAD_POS,
 } from "./site-scene";
-import WellheadParams from "../../../shared/wellhead-gtlf/wellhead-params";
 import WellHeadGTLF from "../../../shared/wellhead-gtlf/wellhead-gtlf";
 
 function SitePlayGround(props) {
@@ -144,9 +143,9 @@ function SitePlayGround(props) {
               ref={wRef}
               cloudGlbURL={MODELS.WELL_HEAD}
               onClick={(show) => null}
-              onHover={onHover}
               position={WELL_HEAD_POS}
               //data={wellheadData}
+              fast
               scale={5}
             />
 
