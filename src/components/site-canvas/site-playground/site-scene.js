@@ -57,8 +57,8 @@ export const getPos = (LEFT_POS_START, i, isOnFocus) => {
 
 export const WELL_HEAD_POS = [0, 3, -10];
 export const DATA_VAN_POS = [30, 4.9, -6];
-export const BLENDER_VAN_POS = [8, 3, 60];
-export const MISSILE_POS = [0, 3, 30];
-export const MISSILE_NODE_POS = [-0.4, 4.2, 25];
+export const BLENDER_VAN_POS = [8, 3, 40];
+export const MISSILE_POS = [0, 3, 20];
+export const MISSILE_NODE_POS = [-0.4, 4.2, 15];
 export const DATA_VAN_ROT = [0, Math.PI / 1, 0];
 export const B_VAN_ROT = [0, Math.PI / 2, 0];
